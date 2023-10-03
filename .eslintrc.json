@@ -1,0 +1,3 @@
+firebase{
+  "extends": "next/core-web-vitals"
+}
