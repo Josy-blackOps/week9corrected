@@ -1,17 +1,19 @@
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { initializeApp } from 'firebase/app';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAjBhr0wDtDrs4n4uDtYO0hRazkgWdL8sw",
-  authDomain: "draft-data-driven-full-stack.firebaseapp.com",
-  projectId: "draft-data-driven-full-stack",
-  storageBucket: "draft-data-driven-full-stack.appspot.com",
-  messagingSenderId: "976459760303",
-  appId: "1:976459760303:web:e65f004860c95e46c84a5a"
+ apiKey: "AIzaSyBVoc6nh4Z3XoDlBKVoTfAZfsoONNfEXJk",
+  authDomain: "final-2-115da.firebaseapp.com",
+  projectId: "final-2-115da",
+  storageBucket: "final-2-115da.appspot.com",
+  messagingSenderId: "336853037785",
+  appId: "1:336853037785:web:a9464cd680a711dcb204c8"
 };
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const firestore = getFirestore(app);
-export { auth, firestore };
+const authInstance = getAuth(app);
+const firestoreInstance = getFirestore(app);
+
+export { authInstance, firestoreInstance, onAuthStateChanged };
